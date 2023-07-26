@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Calculator</title>
+</head>
+<body>
+	<div class="calculator calculator-dark">
+		<div class="calculator__display">
+			<div class="calculator__history"></div>
+			<div class="calculator__total">0</div>
+		</div>
+		<div class="calculator__actions">
+			<div class="calculator__row">
+				<div class="calculator__column calculator__column-reset"
+				data-type="clear">C</div>
+				<div class="calculator__column calculator__column-action" 
+				data-type="percent">%</div>
+				<div class="calculator__column calculator__column-action" 
+				data-type="delete">⌫</div>
+				<div class="calculator__column calculator__column-action" 
+				data-type="/">÷</div>
+			</div>
+			<div class="calculator__row">
+				<div class="calculator__column" data-type="7">7</div>
+				<div class="calculator__column" data-type="8">8</div>
+				<div class="calculator__column" data-type="9">9</div>
+				<div class="calculator__column calculator__column-action" 
+				data-type="*">*</div>
+			</div>
+			<div class="calculator__row">
+				<div class="calculator__column" data-type="4">4</div>
+				<div class="calculator__column" data-type="5">5</div>
+				<div class="calculator__column" data-type="6">6</div>
+				<div class="calculator__column calculator__column-action" 
+				data-type="-">-</div>
+			</div>
+			<div class="calculator__row">
+				<div class="calculator__column" data-type="1">1</div>
+				<div class="calculator__column" data-type="2">2</div>
+				<div class="calculator__column" data-type="3">3</div>
+				<div class="calculator__column calculator__column-action" 
+				data-type="+">+</div>
+			</div>
+			<div class="calculator__row">
+				<div class="calculator__column" data-type="float">.</div>
+				<div class="calculator__column" data-type="0">0</div>
+				<div class="calculator__column" data-type="history">
+					<img src="img/history.svg">
+				</div>
+				<div class="calculator__column calculator__column-action" 
+				data-type="=">=</div>
+			</div>
+		</div>
+	</div>
+	<script src="/js/script.js"></script>
+</body>
+</html> 

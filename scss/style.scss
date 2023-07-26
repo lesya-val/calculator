@@ -1,0 +1,121 @@
+//****************************************ШРИФТЫ************************************************************
+//Подключение шрифтов//
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+//Шрифт по умолчанию
+$fontfamily:"Poppins";
+
+//Цвет шрифта по умолчанию
+$color: #000000;
+
+//Цвета шрифтов
+$dark: #000000;
+$light: #FFFFFF;
+$blue: #00B0D7;
+$pink: #FF6060;
+
+//Размер шрифта по умолчанию
+$fontsize: 24px;
+
+//Ширина шрифта по умолчанию
+$fontweight: 400;
+//****************************************ПЕРЕМЕННЫЕ********************************************************
+$minwidth:320px;
+
+//Цвета окон
+$display_light: #FAFAFA;
+$actions_light: #E9F6FF;
+$display_dark: #00223A;
+$actions_dark: #001B2F;
+//***************************************ПОДКЛЮЧЕНИЕ ФАЙЛОВ*************************************************
+//Обнуляющий стиль
+@import "null_style.scss";
+//****************************************ОБЩИЕ ПАРАМЕТРЫ***************************************************
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+//****************************************ОСНОВНОЙ БЛОК*****************************************************
+.calculator {
+	overflow: hidden;
+	width: 320px;
+	border-radius: 20px;
+	
+	box-shadow: 8px 32px 64px rgba(0, 0, 0, 0.3);
+
+	&__display {
+		padding: 20px 24px 44px;
+		margin-bottom: -24px;
+		text-align: right;
+
+		background-color: $display_light;
+	}
+
+	&__history {
+		height: 33px;
+		margin-bottom: 15px;
+	}
+
+	&__history strong {
+		font-weight: 400;
+		color: $pink;
+	}
+
+	&__total {
+		height: 42px;
+		font-size: 32px;
+		font-weight: 600;
+	}
+
+	&__actions {
+		padding: 16px 16px 32px;
+		border-radius: 20px;
+		padding-bottom: 32px;
+		background-color: $actions_light;
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__column {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 64px;
+		height: 64px;
+		cursor: pointer;
+
+		&-reset {
+			color: $pink;
+		}
+
+		&-action {
+			color: $blue;
+		}
+	}
+
+	&__column img{ 
+		pointer-events: none;
+	}
+
+	/***Dark theme***/
+	&-dark {
+		color: $light;
+
+		.calculator__display {
+			background-color: $display_dark;
+		}
+
+		.calculator__actions {
+			background-color: $actions_dark
+		}
+	}
+}
+
+//***************************************ПОДКЛЮЧЕНИЕ АДАПТИВА*************************************************
+@import "media.scss";
+// ***************************************ПОДКЛЮЧЕНИЕ ЕДИНИЦ ИЗМЕРЕНИЯ*************************************************
